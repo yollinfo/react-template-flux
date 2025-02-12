@@ -1,11 +1,9 @@
-import PropTypes from 'prop-types';
+import { Navigate } from 'react-router';
 
 function ProtectedRoute({ children }) {
-  return <div>{children}</div>;
+  const { store } = useGlobalStore();
+  if (!store.user?.isAuthenticated) return <Navigate to="/" />;
+  return <>{children}</>;
 }
 
 export default ProtectedRoute;
-
-ProtectedRoute.propTypes = {
-  children: PropTypes.node.isRequired,
-};

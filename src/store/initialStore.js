@@ -37,8 +37,11 @@
 export const initialState = () => ({
     // demo for todos - replace with your needed state
     todos: [
-        {id: "1", text: 'Walk the dog', done: false},
-        {id: "2", text: 'Code the project', done: false},
+        {id: "1", title: 'This comes from your global store, delete it!', completed: false},
     ],
+    user: {
+        isAuthenticated: false,
+        userId: 1
+    },
     // you can add here more slices (properties in the object) - user, theme, etc...
 });
