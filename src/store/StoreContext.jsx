@@ -6,7 +6,6 @@ import { storeReducer } from './storeReducer.js';
 export const StoreContext = createContext(null);
 
 export function StoreProvider({ children }) {
-
   const [store, dispatch] = useReducer(storeReducer, initialState());
 
   return (

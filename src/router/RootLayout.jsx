@@ -1,4 +1,4 @@
-import { Outlet } from "react-router"
+import { Outlet } from 'react-router';
 
 function RootLayout() {
   return (
@@ -6,7 +6,7 @@ function RootLayout() {
       {/* Define your layout here */}
       <Outlet />
     </div>
-  )
+  );
 }
 
-export default RootLayout
+export default RootLayout;

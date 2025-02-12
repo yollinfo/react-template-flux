@@ -1,5 +1,6 @@
-import { Link, Navigate } from 'react-router'
+import { Link, Navigate } from 'react-router';
 import Logo from '../../components/Logo.jsx';
+import NavButton from '../../components/NavButton.jsx';
 
 function Home() {
   return (
@@ -9,8 +10,8 @@ function Home() {
       </h1>
       <Logo />
       <div className="text-center">
-        <Link className='text-decoration-none btn btn-primary btn-sm m-2' to="/about">About</Link>
-        <Link className='text-decoration-none btn btn-primary btn-sm m-2' to="/demo">Demo</Link>
+        <NavButton to="/about" text={'> About'} />
+        <NavButton to="/demo" text="> Demo" />
       </div>
     </>
   );

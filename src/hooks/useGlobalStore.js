@@ -6,11 +6,15 @@ import { StoreContext } from '../store/StoreContext.jsx';
  * This hook uses React's context API to provide access to the store.
  * It must be used within a component wrapped by the StoreProvider.
  */
-export function useGlobalStore(){
-    const contextValue = useContext(StoreContext);
-    useDebugValue(contextValue, (value) => `Global Store: ${JSON.stringify(value)}`);
+export function useGlobalStore() {
+  const contextValue = useContext(StoreContext);
+  useDebugValue(
+    contextValue,
+    (value) => `Global Store: ${JSON.stringify(value)}`
+  );
 
-    if(!contextValue) throw new Error('useStore must be used within StoreProvider');
+  if (!contextValue)
+    throw new Error('useStore must be used within StoreProvider');
 
-    return contextValue;
+  return contextValue;
 }

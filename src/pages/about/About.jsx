@@ -9,9 +9,9 @@ function About() {
       </h1>
       <Logo />
       <div className="text-center">
-        <Link className='text-decoration-none btn btn-primary btn-sm m-2' to="/home">Home</Link>
-        <Link className='text-decoration-none btn btn-primary btn-sm m-2' to="/demo">Demo</Link>
-      </div> 
+        <NavButton to="/home" text={'> Home'} />
+        <NavButton to="/demo" text="> Demo" />
+      </div>
     </>
   );
 }
